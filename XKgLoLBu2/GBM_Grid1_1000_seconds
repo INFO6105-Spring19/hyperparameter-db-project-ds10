@@ -8,9 +8,9 @@
                     "schema_name": "ModelKeyV3",
                     "schema_type": "Key<Model>"
                 },
-                "name": "XRT_1_AutoML_20190416_112303",
+                "name": "GBM_grid_1_AutoML_20190416_112303_model_2",
                 "type": "Key<Model>",
-                "URL": "/3/Models/XRT_1_AutoML_20190416_112303"
+                "URL": "/3/Models/GBM_grid_1_AutoML_20190416_112303_model_2"
             }
         },
         "training_frame": {
@@ -52,7 +52,7 @@
         },
         "score_tree_interval": {
             "default": 0,
-            "actual": 0
+            "actual": 5
         },
         "fold_assignment": {
             "default": "AUTO",
@@ -112,15 +112,15 @@
         },
         "ntrees": {
             "default": 50,
-            "actual": 50
+            "actual": 542
         },
         "max_depth": {
-            "default": 20,
-            "actual": 20
+            "default": 5,
+            "actual": 5
         },
         "min_rows": {
-            "default": 1.0,
-            "actual": 1.0
+            "default": 10.0,
+            "actual": 5.0
         },
         "nbins": {
             "default": 20,
@@ -156,31 +156,51 @@
         },
         "seed": {
             "default": -1,
-            "actual": 3956522368262092058
+            "actual": -5788326743767835424
         },
         "build_tree_one_node": {
             "default": false,
             "actual": false
         },
-        "mtries": {
-            "default": -1,
-            "actual": -1
+        "learn_rate": {
+            "default": 0.1,
+            "actual": 0.01
+        },
+        "learn_rate_annealing": {
+            "default": 1.0,
+            "actual": 1.0
+        },
+        "distribution": {
+            "default": "AUTO",
+            "actual": "gaussian"
+        },
+        "quantile_alpha": {
+            "default": 0.5,
+            "actual": 0.5
+        },
+        "tweedie_power": {
+            "default": 1.5,
+            "actual": 1.5
+        },
+        "huber_alpha": {
+            "default": 0.9,
+            "actual": 0.9
+        },
+        "checkpoint": {
+            "default": null,
+            "actual": null
         },
         "sample_rate": {
-            "default": 0.6320000290870667,
-            "actual": 0.6320000290870667
+            "default": 1.0,
+            "actual": 0.8
         },
         "sample_rate_per_class": {
             "default": null,
             "actual": null
         },
-        "binomial_double_trees": {
-            "default": false,
-            "actual": false
-        },
-        "checkpoint": {
-            "default": null,
-            "actual": null
+        "col_sample_rate": {
+            "default": 1.0,
+            "actual": 0.7
         },
         "col_sample_rate_change_per_level": {
             "default": 1.0,
@@ -188,7 +208,7 @@
         },
         "col_sample_rate_per_tree": {
             "default": 1.0,
-            "actual": 1.0
+            "actual": 0.4
         },
         "min_split_improvement": {
             "default": 1e-05,
@@ -196,7 +216,15 @@
         },
         "histogram_type": {
             "default": "AUTO",
-            "actual": "Random"
+            "actual": "AUTO"
+        },
+        "max_abs_leafnode_pred": {
+            "default": 1.7976931348623157e+308,
+            "actual": 1.7976931348623157e+308
+        },
+        "pred_noise_bandwidth": {
+            "default": 0.0,
+            "actual": 0.0
         },
         "categorical_encoding": {
             "default": "AUTO",
@@ -210,15 +238,15 @@
             "default": null,
             "actual": null
         },
-        "distribution": {
-            "default": "AUTO",
-            "actual": "gaussian"
-        },
         "custom_metric_func": {
             "default": null,
             "actual": null
         },
         "export_checkpoints_dir": {
+            "default": null,
+            "actual": null
+        },
+        "monotone_constraints": {
             "default": null,
             "actual": null
         }
